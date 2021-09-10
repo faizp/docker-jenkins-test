@@ -2,18 +2,19 @@ pipeline {
     agent any
 
     stages {
-        stage('build') {
+        stage('check') {
             steps {
                 echo 'Project build'
                 pwd()
             }
         }
-        stage('test') {
+        stage('build') {
             steps {
-                echo 'project tested'
+                bat '''docker-compose up 
+                docker-compose build'''
             }
         }
-        stage('deply') {
+        stage('deploy') {
             steps {
                 echo 'Project deployed'
             }
