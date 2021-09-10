@@ -5,8 +5,8 @@ pipeline {
         stage('build') {
             steps {
                 echo 'Project build'
-                pwd
-                ls
+                bat 'pwd'
+                bat 'ls'
             }
         }
         stage('test') {
