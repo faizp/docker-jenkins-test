@@ -10,13 +10,7 @@ pipeline {
         }
         stage('build') {
             steps {
-                 sh '''#!/bin/bash
-                 echo "hello"
-                 ls
-                 pwd
-                 docker-compose -f /var/jenkins_home/workspace/jenkins_pipeline_test/docker-compose.yml build
-                 docker-compose -f /var/jenkins_home/workspace/jenkins_pipeline_test/docker-compose.yml up
-                 '''
+                 sh '/usr/local/bin/docker-compose up --build'     
             }
         }
         stage('deploy') {
