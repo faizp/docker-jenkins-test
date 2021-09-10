@@ -5,6 +5,8 @@ pipeline {
         stage('build') {
             steps {
                 echo 'Project build'
+                pwd
+                ls
             }
         }
         stage('test') {
