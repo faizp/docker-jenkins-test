@@ -14,8 +14,8 @@ pipeline {
                  echo "hello"
                  ls
                  pwd
-                 docker-compose build
-                 docker-compose up
+                 docker-compose -f /var/jenkins_home/workspace/jenkins_pipeline_test build
+                 docker-compose -f /var/jenkins_home/workspace/jenkins_pipeline_test up
                  '''
             }
         }
