@@ -11,6 +11,9 @@ pipeline {
         stage('build') {
             steps {
                  sh '''#!/bin/bash
+                 echo "hello"
+                 ls
+                 pwd
                  docker-compose build
                  docker-compose up
                  '''
