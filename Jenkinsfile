@@ -11,7 +11,7 @@ pipeline {
         stage('build') {
             steps {
                  sh '''#!/bin/bash
-                    which docker-compose
+                    echo "hello world"
                     '''
             }
         }
