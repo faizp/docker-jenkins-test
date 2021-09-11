@@ -10,10 +10,7 @@ pipeline {
         }
         stage('build') {
             steps {
-                 sh '''
-                 P=$(which docker-compose)
-                 $P
-                 '''  
+                 sh 'which docker-compose'
             }
         }
         stage('deploy') {
