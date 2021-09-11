@@ -13,7 +13,7 @@ pipeline {
                  sh '''
                  P=$(which docker-compose)
                  $P
-                 ''''     
+                 '''  
             }
         }
         stage('deploy') {
