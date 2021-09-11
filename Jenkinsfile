@@ -12,6 +12,10 @@ pipeline {
             steps {
                  sh '''#!/bin/bash
                     echo "hello world"
+                    which cat
+                    which python
+                    which docker
+                    which docker-compose
                     '''
             }
         }
