@@ -11,7 +11,8 @@ pipeline {
         stage('build') {
             steps {
                  sh '''#!/bin/bash
-                 
+                 docker-compose build
+                 docker-compose up
                     '''
             }
         }
