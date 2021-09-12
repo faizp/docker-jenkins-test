@@ -11,9 +11,7 @@ pipeline {
         stage('build') {
             steps {
                  sh '''#!/bin/bash
-                    echo "hello world"
-                    which cat
-                    which docker
+                 
                     '''
             }
         }
