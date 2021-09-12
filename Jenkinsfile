@@ -10,8 +10,8 @@ pipeline {
         }
         stage('build') {
             steps {
-                 sh 'docker-compose build'
-                 sh 'docker-compose up'
+                 sh 'docker-compose build -v $(which docker):/usr/bin/docker'
+                 sh 'docker-compose up -v $(which docker):/usr/bin/docker'
                 
             }
         }
