@@ -10,10 +10,9 @@ pipeline {
         }
         stage('build') {
             steps {
-                 sh '''#!/bin/bash
-                 docker-compose build
-                 docker-compose up
-                    '''
+                 sh 'docker-compose build'
+                 sh 'docker-compose up'
+                
             }
         }
         stage('deploy') {
