@@ -14,8 +14,8 @@ pipeline {
         stage('build') {
             steps {
                 echo "PATH is: $PATH"
-                echo $(which docker)
-                echo $(which docker-compose)
+                sh '$(which docker)'
+                sh '$(which docker-compose)'
                 
                 sh 'docker-compose build'
                 sh 'docker-compose up'
