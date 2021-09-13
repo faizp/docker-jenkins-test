@@ -13,8 +13,9 @@ pipeline {
         }
         stage('build') {
             steps {
-                 sh 'docker-compose build'
-                 sh 'docker-compose up'
+                echo "PATH is: $PATH"
+                sh 'docker-compose build'
+                sh 'docker-compose up'
             }
         }
         stage('deploy') {
